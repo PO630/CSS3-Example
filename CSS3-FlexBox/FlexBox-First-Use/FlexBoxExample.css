@@ -1,0 +1,36 @@
+
+
+/* Boite noir : visuel de base */
+.item {
+    text-align: center;
+    width: 10%;
+    height: 10%;
+    margin: 1%;
+    padding: 1%;
+    border: 0.2em solid black;
+  }
+
+.container
+{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*
+    // Active la flexbox
+        display:flex;
+    // Changement des directions
+        flex-direction: row;
+        flex-direction: row-reverse;
+        flex-direction: column;
+        flex-direction: column-reverse;
+    // Faire que les elements retourne a la ligne
+        flex-wrap: wrap;
+    // Faire que les éléments soient alignié
+        justify-content: center;
+        justify-content: space-evenly;
+    // 
+
+*/
