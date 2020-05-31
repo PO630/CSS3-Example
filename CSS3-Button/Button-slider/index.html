@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Flexbox</title>
+
+    <link rel="stylesheet" type="text/css" href="styleCss.css">
+    <link rel="stylesheet" type="text/css" href="CssEffect.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <a href="#">Boutton</a>
+        <a href="#">Boutton</a>
+        <script type="text/javascript">
+            const buttons = document.querySelectorAll('a');
+
+            buttons.forEach( btn => {
+                btn.addEventListener('click', function(e)
+                {
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
+
+                    let ripples = document.createElement('span');
+                    ripples.style.left = x + 'px';
+                    ripples.style.top = y + 'px';
+                    this.appendChild(ripples);
+
+                    setTimeout( () => {
+                        ripples.remove()},1000
+                    );
+                })
+            })
+        </script>
+    </div>
+
+</body>
+
+
+</html>
